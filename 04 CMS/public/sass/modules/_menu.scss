@@ -1,0 +1,102 @@
+.menu{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    padding: 1.5rem 2rem;
+    transition: all .3s;
+    @media only screen and (max-width: $bp-xlarge){
+        background-color: $color-base;
+    }
+    &.active{
+        background-color: $color-base;
+        transition: all .3s;
+        img{
+            transform: scale(.7);
+            transition: all .3s;
+        }
+    }
+    &__contenedor{
+        // & = .menu
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            z-index: 1;
+        }
+        &__btnBox{
+            display: none;
+            color: white;
+            font-size: 2.4rem;
+            border: 1px solid white;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: all .3s;
+            z-index: 1;
+            &:hover{
+                background-color: white;
+                color: $color-base;
+                transition: all .3s;
+            }
+            @media only screen and (max-width: $bp-large){
+                display: block;
+            }
+        }
+        &__menuBox{
+            // & = .menu__contenedor
+            display: flex;
+            @media only screen and (max-width: $bp-large){
+                position: absolute;
+                background-color: $color-base;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s;
+                &.activarMenu{
+                    left: 0;
+                    transition: all .5s;
+                }
+            }
+            img{
+                transform: scale(1);
+                transition: all .3s;
+            }
+            &__item{
+                &:not(:last-child){
+                    margin-right: .5rem;
+                    @media only screen and (max-width: $bp-large){
+                        margin-right: 0;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+                // & = .menu__contenedor__menuBox
+                &--link{
+                    // & = .menu__contenedor__menuBox__item
+                    color: white;
+                    font-family: $font-poppin;
+                    padding: 1rem 1.5rem;
+                    font-size: 1.6rem;
+                    border-bottom: .3rem solid transparent;
+                    transition: all .3s;
+                    @media only screen and (max-width: $bp-large){
+                        font-size: 2.2rem;
+                    }
+                    // & => menu__contenedor__menuBox__item--link
+                    &:hover{
+                        color: #00e5c2;
+                        border-bottom: .3rem solid #00e5c2;
+                        transition: all .3s;
+                    }
+                    &.active{ // & => .menu__contenedor__menuBox__item--link.active
+                        color: #00e5c2;
+                        border-bottom: .3rem solid #00e5c2;
+                    }
+                }
+            }
+        }
+    }
+}

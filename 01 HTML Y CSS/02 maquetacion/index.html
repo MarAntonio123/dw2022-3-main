@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquetación</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            border: 5px solid black;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        section{
+            border: 5px solid blue;
+            text-align: center;
+            text-transform: uppercase;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        article{
+            border: 5px solid #e74c3c;
+            /* display: inline-block; */
+            /* 💡💡 PORCENTAJES */
+            /* width: 740px; */
+            /* width: 70%;  + 5px de la dercha y los 5 px de la izquierda */
+            width: calc(70% - 10px);
+            /* 760px */
+        }
+        aside{
+            border: 5px solid #e67e22;
+            /* display: inline-block; */
+            /* width: 190px; */
+            /* width: 30%; */
+            width: calc(30% - 10px);
+        }
+        footer{
+            border: 5px solid #1abc9c;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        HEADER
+    </header>
+    <section><!-- 960px -->
+        <article><!-- 750px -->
+            article
+        </article>
+        <aside><!-- 200px -->
+            aside
+        </aside>
+        <div>
+            jasgdjksagdhgsajhdsahjkdas
+        </div>
+    </section>
+    <footer>
+        footer
+    </footer>
+    <h1>titulo</h1>
+</body>
+</html>

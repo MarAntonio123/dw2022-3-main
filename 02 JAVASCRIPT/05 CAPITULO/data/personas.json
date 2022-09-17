@@ -1,0 +1,14 @@
+{
+    "persona1": {
+        "nombre": "Juan",
+        "apellido": "Quispe",
+        "edad": 25
+    },
+    "persona2":{
+        "nombre": "Lucia",
+        "apellido": "Jimenez",
+        "edad": 30,
+        "hobbies": ["cantar", "juagar ps4"],
+        "avatar": "img/gatito.png"
+    }
+}

@@ -1,0 +1,35 @@
+.derechosFooter{
+    background-color:#1f72ff;
+    &__conteiner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+        @media only screen and (max-width: $bp-large){
+            width: calc(50% - 1rem);
+        }
+        @media only screen and (max-width: $bp-medium){
+            width: 100%; 
+            text-align: center; 
+        }
+        &--parrafo{
+        font-family:$font-poppin;
+        color:white;
+        font-size:1.5rem;
+        
+        }
+        a{
+            
+            font-size: 4rem;
+
+            @media only screen and (max-width: $bp-large){
+                 
+                margin-left: 47%;
+                 order:-1;
+            }
+            margin-right: 4%;
+        }
+    }
+}

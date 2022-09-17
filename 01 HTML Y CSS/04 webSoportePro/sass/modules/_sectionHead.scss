@@ -1,0 +1,102 @@
+.sectionHead{
+    display: flex;
+    flex-wrap: wrap;
+    &__aside{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: $bp-xlarge){
+            width: 100%;
+            padding-top: 15rem;
+            padding-bottom: 10rem;
+        }
+        &__col{
+            margin: 0 10rem 0 8rem;
+            @media only screen and (max-width:$bp-small){
+                //minimo en cel 10 a 12 px
+                margin:0 0 0 2rem;
+            }
+            &--exp{
+                font-family: $font-inter;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $color-base;
+                font-size: 1.5rem;
+            }
+            h1{
+                font-family: $font-poppin;
+                font-size: 5rem;
+                font-weight: 500;
+                line-height: 6rem;
+                @media only screen and (max-width:$bp-small){
+                    font-size: 4rem;
+                    line-height:5rem;
+                }
+            }
+            &--descri{
+                font-family: $font-inter;
+                font-size: 2rem;
+                color: rgba(black, .8);
+            }
+        }
+    }
+    &__article{
+        width: 60%;
+        position: relative;
+        @media only screen and (max-width: $bp-xlarge){
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        &--soporte{
+            position: absolute;
+            background-color: $color-base;
+            color: white;
+            font-family: $font-poppin;
+            bottom: 0;
+            padding: 6rem 5rem;
+            font-size: 2.2rem;
+            font-weight: 500;
+            span{
+                display: block;
+            }
+        }
+        &__caja{
+            position: absolute;
+            display: flex;
+            bottom: 2rem;
+            left: 40%;
+            @media only screen and (max-width: $bp-medium){
+                display:none;
+            }
+            &--apple,
+            &--time{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 3rem 2rem 2rem 2rem;
+                font-family: $font-poppin;
+                bottom: 3rem;
+                span{
+                    width: 13rem;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+                i{
+                    font-size: 5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+            &--apple{
+                background-color: white;
+                margin-right: 1rem;
+            }
+            &--time{
+                background-color: $color-base;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+/* ⚡⚡ BREAKPOINTS ⚡⚡ */
+// TODO SE MANEJA POR LA UNIDAD DE MEDIDA DE LA FUENTE = 16PX
+/*
+    1200PX / 16PX = 75em
+    1135px
+    992 / 16 = 62em
+    768 / 16 = 48em
+    654 
+    576 / 16 = 36em
+    480 / 16 = 30em
+    320 / 16 = 20em
+*/
+
+$bp-xlarge: 75em;
+$bp-large: 62em;
+$bp-medium: 48em;
+$bp-small: 36em;
+$bp-xsmall: 30em;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    // 🔥🔥 TAMAÑO POR DEFECTO DE LA FUENTE 16PX
+    // TRANFORMAR ESE TAMAÑO DE LA FUENTE A UNA 10px
+    // REM => 1rem = 10px
+    // 1.6rem = 16px
+    // 16px -> 100%
+    // 10px -> 62.5%
+    font-size: 62.5%; // es igual o estamos tranformando la fuente base a 10px
+    scroll-behavior: smooth;
+    @media only screen and (max-width: $bp-small){
+        font-size: 50%;
+    }
+}
+
+// a{
+//     text-decoration: none;
+// }
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+img{
+    display: block;
+}

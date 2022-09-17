@@ -1,0 +1,22 @@
+.texto{
+    padding:30px 20px 30px 20px;
+    border: 2px black solid;
+    font-size: 30px;
+}
+.bt{
+    padding:20px 20px 20px 20px;
+    font-size:30px;
+    color: black;
+}
+.colorpicker{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
+    padding:20px 20px 55px 20px;
+    width: 100%;
+}
+.blo{
+    position:relative;
+    display:inline-block;
+}

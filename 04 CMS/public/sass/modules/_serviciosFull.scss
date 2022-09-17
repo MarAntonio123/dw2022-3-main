@@ -1,0 +1,83 @@
+.serviciosFull{
+    &__contenedor{
+        &__caja{
+            &__item{
+                display: flex;
+                flex-wrap: wrap;
+                // flex-direction: row-reverse;
+                // margin-bottom: 10rem;
+                &:not(:last-child){
+                    margin-bottom: 10rem;
+                }
+                &:nth-child(even){
+                    flex-direction: row-reverse;
+                }
+                &--img{
+                    width: 40%;
+                    @media only screen and (max-width: $bp-large){
+                        width: 100%;
+                    }
+                }
+                &__cajaMedia{
+                    width: 20%;
+                    position: relative;
+                    @media only screen and (max-width: $bp-large){
+                        width: 100%;
+                        order: -1;
+                    }
+                    &__imgBox{
+                        background-color: white;
+                        padding-top: 8rem;
+                        padding-bottom: 5rem;
+                        img{
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    &::before{
+                        content: "";
+                        // padding: 1rem 0;
+                        width: 2px;
+                        height: 95%;
+                        position: absolute;
+                        background-color: rgba(black, .1);
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                }
+                &__cajaRight{
+                    width: 40%;
+                    @media only screen and (max-width: $bp-large){
+                        width: 100%;
+                    }
+                    h3{
+                        font-family: $font-inter;
+                        font-size: 3.5rem;
+                        font-weight: 500;
+                        margin-top: 3rem;
+                        line-height: 1.2;
+                        margin-bottom: 3rem;
+                    }
+                    div{
+                        p{
+                            font-family: $font-poppin;
+                            font-size: 1.5rem;
+                            &:not(:last-child){
+                                margin-bottom: 2.5rem;
+                            }
+                            i{
+                                font-size: 1.8rem;
+                                margin-right: 1.5rem;
+                            }
+                        }
+                    }
+                    a{
+                        margin-top: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}
